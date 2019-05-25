@@ -1,5 +1,0 @@
-body{ color:white; height: 100vh; background:linear-gradient(180deg, rgb(231, 231, 231), rgb(206, 206, 206)) }
-.frame{ border-radius: 5px; width: 700px; height: 70vh; border:1px black solid; overflow: hidden }
-.hourly{border-right: 1px grey solid ;  }
-.top_div{width:100%; height:200px; background-image: url('../images/paris.jpg')}
-.bottom_div{background: linear-gradient(90deg,rgb(226, 226, 226), rgb(27, 27, 27)); width:100%; }
