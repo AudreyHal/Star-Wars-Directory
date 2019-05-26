@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+ 
     <div>
       <v-text-field
         v-model="search"
@@ -34,7 +34,7 @@
         <v-pagination v-model="pagination.page" :length="pages"></v-pagination> 
       </div>
     </div>
-  </v-app>
+ 
 </template>
 
 <script>
