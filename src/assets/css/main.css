@@ -1,3 +1,16 @@
-body{background: url("../images/background1.jpg"); background-size: cover  }
+body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/bk7.jpg") !important;background-size: cover; background: no-repeat #000;}
 #body{ height:300px ;}
 table, .elevation-1{background: rgb(0, 0, 0, 0.4)}
+.outer-container{    background-image: linear-gradient(rgba(0,0,0,.85) 15%,rgba(0,0,0,.2) 40%,#000 90%); background-attachment: fixed; margin: 0;   height: 100vh;}
+.container, .container-fluid { padding-right: 15px;  padding-left: 15px;   }
+.container, .container-fluid { margin-left: auto; margin-right: auto;    }
+.row { margin-left: -15px;  margin-right: -15px;}
+.col-xs-12 {width: 100%;}
+.cardcont { border-radius: 3px; background: rgba(0,0,0,.85);}
+@media (min-width: 1200px){.container { max-width: 1140px; }}
+@media (min-width: 992px){.container {max-width: 940px;}}
+@media (min-width: 768px){.container {max-width: 720px;}}
+@media (min-width: 544px){.container {max-width: 576px;}}
+@media (min-width: 992px){.offset-lg-1 { margin-left: 8.33333%;}}
+@media (min-width: 992px){.col-lg-10 {float: left; width: 83.33333%;}}
+
