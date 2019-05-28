@@ -1,39 +1,46 @@
 <template>
  
     <div>
-      <v-text-field
+      <div class="row">
+       <div class="col-xs-12 col-sm-6 col-lg-5">
+       </div>
+       <div class="col-xs-12 col-sm-6 col-lg-7">
+       <v-text-field
         v-model="search"
         append-icon="search"
         label="Search"
         single-line
         hide-details
-      ></v-text-field>
-        <v-select 
+       ></v-text-field>
+       </div>
+      </div>
+       <v-select 
         label="Gender" 
         :items="['male', 'female', 'robot']"
         v-model="gender"
-      ></v-select>
-      <v-data-table
+       ></v-select>
+       
+       <v-data-table
         :headers="headers"
         :items="filteredItems"
         :search="search"
         hide-actions
        :pagination.sync="pagination"
         class="elevation-1"
-      >
+       >
+       
+
         <template v-slot:items="props">
-          <td>{{ props.item.name }}</td>
-          <td class="text-xs-right">{{ props.item.name }}</td>
-          <td class="text-xs-right">{{ props.item.height }}</td>
-          <td class="text-xs-right">{{ props.item.mass }}</td>
-          <td class="text-xs-right">{{ props.item.hair_color }}</td>
-          <td class="text-xs-right">{{ props.item.gender }}</td>
+          <td class="text-xs-center">{{ props.item.name }}</td>
+          <td class="text-xs-center">{{ props.item.birth_year }}</td>
+          <td class="text-xs-center">{{ props.item.gender }}</td>
         </template>
       </v-data-table>
       <div class="text-xs-center pt-2">
         <v-pagination v-model="pagination.page" :length="pages"></v-pagination> 
       </div>
-    </div>
+     </div>
+    
  
 </template>
 
@@ -55,16 +62,15 @@ data () {
       selected: [],
       headers: [
         {
-          text: 'Dessert (100g serving)',
+          text: 'Full Name',
           align: 'left',
           sortable: false,
           value: 'name'
         },
-        { text: 'Calories', value: 'calories' },
-        { text: 'Fat (g)', value: 'fat' },
-        { text: 'Carbs (g)', value: 'carbs' },
-        { text: 'Protein (g)', value: 'protein' },
-        { text: 'Iron (%)', value: 'iron' }
+        { text: 'Birth Year', value: 'birth_year' },
+        { text: 'Gender', value: 'gender' }
+       
+      
       ],
         desserts: []
       //  [ {
