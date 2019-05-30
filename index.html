@@ -18,16 +18,17 @@
          <div id="app" class=" center-block">
          
 
-          
-          
-           <People />
-          
+           <People v-if="display_people" />
+           <Selected v-if="show_select"/>   
+           
+           <!-- <Planets /> -->
+           <!-- <Starships /> -->
          </div> 
         </div>
        </div>
       <!-- -->  
      </div>
     </div>
-    <!-- built files will be auto injected -->
+    
   </body>
 </html>

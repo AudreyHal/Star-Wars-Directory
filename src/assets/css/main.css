@@ -12,7 +12,11 @@ table.v-table, .elevation-1{background: rgba(0, 0, 0, 0.7) !important; color: rg
 thead th:first-child{padding: 0px !important ;}
 table.v-table thead th{text-align: center !important}
 button, input, select, textarea{ border-bottom: 1px solid #ffffff }
-
+.selected_name{color:#ffffff}
+.selected_p{margin-top: 0px}
+.selected_p2{color:rgb(223, 208, 1); font-size:1.5em}
+.data-container{padding: 25px}
+/* .selected_name{font-size: 2.5em} */
 /* @media (min-width: 1200px){.container { max-width: 1140px; }}
 @media (min-width: 992px){.container {max-width: 940px;}}*/
 @media (min-width: 768px){.logo {  margin: 0px;} ; /*.container {max-width: 720px;} */}
@@ -30,4 +34,17 @@ img {
     max-width: 140px;
     display: block;
     margin: 0px auto 25px;
+}
+ h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Lato,sans-serif;
+    font-size: 2.2em;
+}
+
+.tagline {
+    display: block;
+    padding-bottom: .25em;
+    color: rgb(223, 208, 1);
+    font-size: 1.3em;
 }
