@@ -3,22 +3,24 @@
     <div>
       <div class="row">
        <div class="col-xs-12 col-sm-6 col-lg-5">
+       <img src="../assets/images/logo.png" class="logo" alt="star-wars-logo" width="130" height="100">
        </div>
        <div class="col-xs-12 col-sm-6 col-lg-7">
        <v-text-field
         v-model="search"
-        append-icon="search"
         label="Search"
+        placeholder="Search People..."
         single-line
         hide-details
+        class="searchbox"
        ></v-text-field>
        </div>
       </div>
-       <v-select 
+      <!-- <v-select 
         label="Gender" 
         :items="['male', 'female', 'robot']"
         v-model="gender"
-       ></v-select>
+       ></v-select> -->
        
        <v-data-table
         :headers="headers"
@@ -31,9 +33,11 @@
        
 
         <template v-slot:items="props">
+         <tr @click="showAlert(props.item)">
           <td class="text-xs-center">{{ props.item.name }}</td>
           <td class="text-xs-center">{{ props.item.birth_year }}</td>
           <td class="text-xs-center">{{ props.item.gender }}</td>
+         </tr>
         </template>
       </v-data-table>
       <div class="text-xs-center pt-2">
@@ -56,6 +60,7 @@ export default {
 
 data () {
     return {
+     
       gender:'all',
       search: '',
       pagination: { rowsPerPage: 11,},
@@ -72,7 +77,9 @@ data () {
        
       
       ],
-        desserts: []
+        desserts: [],
+        //search_data:{}
+
       //  [ {
       //     name: 'Frozen Yogurt',
       //     calories: 159,
@@ -156,7 +163,22 @@ data () {
       // ]
     }
   },
+  methods: {   
+     showAlert(a){
+     if (event.target.classList.contains('btn__content')) return;
+     alert('Alert! \n' + a);
+     
+     var axios = require('axios');
+     var search_data;
+     axios({  method: 'get', url: 'https://swapi.co/api/people/?search='+a.name   })
+    .then(response => (this.search_data=response.data.results, console.log(this.search_data)))
+     
+     var e= this.desserts.indexOf(a);
+    
+    }
+    },
   computed: {
+  
 
     filteredItems(){
       if (this.gender !== "all"){
@@ -175,14 +197,14 @@ data () {
     }
   },
   created () {
-  for (var i = 1; i < 10; i++) {
+   for (var i = 1; i < 10; i++) {
   var swapi_url='https://swapi.co/api/people/?page=' + i;
   var axios = require('axios');
   axios({  method: 'get', url: swapi_url   })
  .then(response => (this.desserts= this.desserts.concat( response.data.results)) )
 } 
 this.pagination.totalItems=87;
- console.log(this.desserts.length)}
+ }
 }
 </script>
 

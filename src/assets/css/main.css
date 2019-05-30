@@ -11,11 +11,23 @@ table.v-table, .elevation-1{background: rgba(0, 0, 0, 0.7) !important; color: rg
 .nopadding {padding: 0;}
 thead th:first-child{padding: 0px !important ;}
 table.v-table thead th{text-align: center !important}
-button, input, select, textarea{ border-bottom: 2px solid #ffffff }
-/* @media (min-width: 1200px){.container { max-width: 1140px; }}
-@media (min-width: 992px){.container {max-width: 940px;}}
-@media (min-width: 768px){.container {max-width: 720px;}}
-@media (min-width: 544px){.container {max-width: 576px;}} */
-@media (min-width: 992px){.offset-lg-1 { margin-left: 8.33333%;}}
-@media (min-width: 992px){.col-lg-10 {float: left; width: 83.33333%;}}
+button, input, select, textarea{ border-bottom: 1px solid #ffffff }
 
+/* @media (min-width: 1200px){.container { max-width: 1140px; }}
+@media (min-width: 992px){.container {max-width: 940px;}}*/
+@media (min-width: 768px){.logo {  margin: 0px;} ; /*.container {max-width: 720px;} */}
+@media (min-width: 544px){.logo {  margin: 0px;}; .searchbox{margin-top:50px  }/*.container {max-width: 576px;} */} 
+ /*@media (min-width: 992px){.offset-lg-1 { margin-left: 8.33333%;}}
+@media (min-width: 992px){.col-lg-10 {float: left; width: 83.33333%;}} */
+::placeholder{color:rgb(126, 126, 126) !important; padding-left: 10px; font-size: 14px }
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.logo {
+    width: 100%;
+    max-width: 140px;
+    display: block;
+    margin: 0px auto 25px;
+}
