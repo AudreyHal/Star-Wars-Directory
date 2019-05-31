@@ -16,13 +16,14 @@
       <div class="row">
         <div class="col-xs-12 col-lg-10 offset-lg-1">
          <div id="app" class=" center-block">
-         
 
-           <People v-if="display_people" />
-           <Selected v-if="show_select"/>   
+          <People v-if="display_people" ></People>
+          <Landing v-if="display_home" ></Landing>
            
-           <!-- <Planets /> -->
-           <!-- <Starships /> -->
+           <Selected v-if="show_select"></Selected>
+           
+           <Planets v-if="display_planets"></Planets>
+           <Starships v-if="display_starships"></Starships>
          </div> 
         </div>
        </div>

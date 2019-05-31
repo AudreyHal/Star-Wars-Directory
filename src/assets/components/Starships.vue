@@ -84,11 +84,11 @@ data () {
   methods: {   
      showAlert(a){
      if (event.target.classList.contains('btn__content')) return;
-     alert('Alert! \n' + a);
+     
      var axios = require('axios');
      var search_data;
      axios({  method: 'get', url: 'https://swapi.co/api/starships/?search='+a.name   })
-    .then(response => (this.search_data=response.data.results,   this.$store.commit('row_data', response.data.results), console.log(this.search_data)))
+    .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'starships'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_starships', false),console.log(this.show_select) ,console.log(this.search_data)))
      var e= this.starships.indexOf(a);
     
     }
@@ -98,7 +98,8 @@ data () {
       'employee_data',
       'clicked_employee',
       'index',
-      'row_data'
+      'row_data',
+      'type'
       
       
     ]),

@@ -34,9 +34,9 @@
 
         <template v-slot:items="props">
          <tr @click="showAlert(props.item)">
-          <td class="text-xs-center">{{ props.item.name }}</td>
-          <td class="text-xs-center">{{ props.item.rotation_period}}</td>
-          <td class="text-xs-center">{{ props.item.population }}</td>
+          <td class="text-xs-left">{{ props.item.name }}</td>
+          <td class="text-xs-left">{{ props.item.rotation_period}}</td>
+          <td class="text-xs-left">{{ props.item.population }}</td>
          </tr>
         </template>
       </v-data-table>
@@ -84,11 +84,11 @@ data () {
   methods: {   
      showAlert(a){
      if (event.target.classList.contains('btn__content')) return;
-     alert('Alert! \n' + a);
+     
      var axios = require('axios');
      var search_data;
      axios({  method: 'get', url: 'https://swapi.co/api/planets/?search='+a.name   })
-    .then(response => (this.search_data=response.data.results,   this.$store.commit('row_data', response.data.results), console.log(this.search_data)))
+    .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'planets'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_planets', false),console.log("change_type:" +this.change_type) ,console.log(this.search_data)))
      var e= this.planets.indexOf(a);
     
     }
@@ -98,7 +98,8 @@ data () {
       'employee_data',
       'clicked_employee',
       'index',
-      'row_data'
+      'row_data',
+      'type'
       
       
     ]),

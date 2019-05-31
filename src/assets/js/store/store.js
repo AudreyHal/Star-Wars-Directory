@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        display_people:true,
+        display_home:true,
+        display_people:false,
         display_planets:false,
         display_starships:false,
         row_data: [],
@@ -27,13 +28,17 @@ export default new Vuex.Store({
           state.type = type
         },
         change_display_planets(state, display_planets) {
-          state.display_planets = display_planets
+          state.display_planets = display_planets,
+          state.display_home = false
         },
         change_display_starships(state, display_starships) {
-          state.display_starships = display_starships
+          state.display_starships = display_starships,
+          state.display_home = false
         },
-        change_display_people(state, type) {
-          state.display_starships = display_starships
+        change_display_people(state, display_people) {
+          state.display_home = false,
+          state.display_people = display_people
+          
         },
       },
       getters: {
@@ -42,6 +47,7 @@ export default new Vuex.Store({
         index: state => state.index,
         row_data: state => state.row_data,
         show_select: state => state.show_select,
+        display_home: state => state.display_home,
         display_people: state => state.display_people,
         display_planets: state => state.display_planets,
         display_starships: state => state.display_starships,

@@ -1,6 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+import Landing from '../components/Landing.vue'
 import People from '../components/People.vue'
 import Planets from '../components/Planets.vue'
 import Starships from '../components/Starships.vue'
@@ -21,7 +22,7 @@ Vue.config.devtools = true;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',store,
- components:{People, Selected, Planets, Starships},
+ components:{People, Selected, Planets, Starships, Landing},
   data () {
     return {
       
@@ -30,6 +31,7 @@ new Vue({
   
     }
   },
+
 
   computed: {
 
@@ -41,7 +43,7 @@ new Vue({
       'display_people',
       'display_planets',
       'display_starships',
-      
+      'display_home'
       
     ])
   },

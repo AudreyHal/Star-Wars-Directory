@@ -34,9 +34,9 @@
 
         <template v-slot:items="props">
          <tr @click="showAlert(props.item)">
-          <td class="text-xs-center">{{ props.item.name }}</td>
-          <td class="text-xs-center">{{ props.item.birth_year }}</td>
-          <td class="text-xs-center">{{ props.item.gender }}</td>
+          <td class="text-xs-left">{{ props.item.name }}</td>
+          <td class="text-xs-left">{{ props.item.birth_year }}</td>
+          <td class="text-xs-left">{{ props.item.gender }}</td>
          </tr>
         </template>
       </v-data-table>
@@ -83,12 +83,11 @@ data () {
   methods: {   
      showAlert(a){
      if (event.target.classList.contains('btn__content')) return;
-     alert('Alert! \n' + a);
-     
+         
      var axios = require('axios');
      var search_data;
      axios({  method: 'get', url: 'https://swapi.co/api/people/?search='+a.name   })
-    .then(response => (this.search_data=response.data.results,   this.$store.commit('row_data', response.data.results),this.$store.commit('show_select', true),this.$store.commit('type', planets)  ,console.log(this.search_data)))
+    .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'people'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_people', false),console.log(this.show_select) ,console.log(this.search_data)))
      
      var e= this.people.indexOf(a);
     
@@ -100,7 +99,8 @@ data () {
       'clicked_employee',
       'index',
       'row_data',
-      'show_select'
+      'show_select',
+      'type'
       
       
     ]),
