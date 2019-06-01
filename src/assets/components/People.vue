@@ -2,8 +2,13 @@
  
     <div>
       <div class="row">
+       <div class="col-xs-12 col-sm-12 col-lg-12">
+        <img src="../images/logo.png" class="logo" alt="star-wars-logo" width="130" height="100">
+       </div>
+      </div>
+      <div class="row second_row">
        <div class="col-xs-12 col-sm-6 col-lg-5">
-       <img src="../images/logo.png" class="logo" alt="star-wars-logo" width="130" height="100">
+       <div class="back"><i aria-hidden="true" class="v-icon material-icons theme--light" style="font-size: 16px; color:white ">arrow_left</i> Take me home</div>
        </div>
        <div class="col-xs-12 col-sm-6 col-lg-7">
        <v-text-field
@@ -87,7 +92,7 @@ data () {
      var axios = require('axios');
      var search_data;
      axios({  method: 'get', url: 'https://swapi.co/api/people/?search='+a.name   })
-    .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'people'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_people', false),console.log(this.show_select) ,console.log(this.search_data)))
+    .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'people'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_people', false),console.log(this.show_select) ,console.log(this.row_data)))
      
      var e= this.people.indexOf(a);
     

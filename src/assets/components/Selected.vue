@@ -1,106 +1,101 @@
 <template>
   <div class="selected">
       <div class="row">
-       <div class="col-xs-12 col-sm-6 col-lg-5">
+       <div class="col-xs-12 col-sm-12 col-lg-12">
          <img src="../images/logo.png" class="logo" alt="star-wars-logo" width="130" height="100">
        </div>
-       <div class="col-xs-12 col-sm-6 col-lg-7">
-        <h1></h1>
-      </div>   
+        
     </div>
-    <div class="elevation-1">
+    <div class="elevation-2">
      <div class="row">
-       <div class="col-xs-12 col-sm-6 col-lg-5">
-         <img src="../images/person.png" class="landing_image" alt="star-wars-logo" >
-       </div>
-       <div class="col-xs-12 col-sm-6 col-lg-7 data-container">
+       <div class="col-xs-12 col-sm-12 col-lg-12 data-container">
         <div v-if="type === 'people'">
-          <h1 class="selected_name">LUKE SKYWALKER</h1>
+          <h1 class="selected_name sh1">{{row_data[0].name}}</h1>
           <div class="details">
             <span class="tagline">Gender</span>
-            <p class="selected_p">Male</p>
+            <p class="selected_p">{{row_data[0].gender}}</p>
           </div>
           <div class="details">
             <span class="tagline">Birth Year</span>
-            <p class="selected_p">1BBY</p>
+            <p class="selected_p">{{row_data[0].birth_year}}</p>
           </div>
           <div class="details">
             <span class="tagline">Skin Color</span>
-            <p class="selected_p">Blond</p>
+            <p class="selected_p">{{row_data[0].skin_color}}</p>
           </div>
             <div class="details">
             <span class="tagline">Gender</span>
-            <p class="selected_p">Male</p>
+            <p class="selected_p">{{row_data[0].gender}}</p>
           </div>
           <div class="details">
-            <span class="tagline">Birth Year</span>
-            <p class="selected_p">1BBY</p>
+            <span class="tagline">Hair Color</span>
+            <p class="selected_p">{{row_data[0].hair_color}}</p>
           </div>
           <div class="details">
-            <span class="tagline">Skin Color</span>
-            <p class="selected_p">Blond</p>
+            <span class="tagline">Eye Color</span>
+            <p class="selected_p">{{row_data[0].eye_color}}</p>
           </div>
          </div>
          <div v-if="type === 'planets'">
-          <h1 class="selected_name">Alderaan</h1>
+          <h1 class="selected_name">{{row_data[0].name}}</h1>
           <div class="details">
             <span class="tagline">Climate</span>
-            <p class="selected_p">Male</p>
+            <p class="selected_p">{{row_data[0].climate}}</p>
           </div>
           <div class="details">
             <span class="tagline">Gravity</span>
-            <p class="selected_p">1BBY</p>
+            <p class="selected_p">{{row_data[0].gravity}}</p>
           </div>
           <div class="details">
             <span class="tagline">Terrain</span>
-            <p class="selected_p">Blond</p>
+            <p class="selected_p">{{row_data[0].terrain}}</p>
           </div>
             <div class="details">
             <span class="tagline">Population</span>
-            <p class="selected_p">Male</p>
+            <p class="selected_p">{{row_data[0].population}}</p>
           </div>
           <div class="details">
             <span class="tagline">Surface Water</span>
-            <p class="selected_p">1BBY</p>
+            <p class="selected_p">{{row_data[0].surface_water}}</p>
           </div>
           <div class="details">
             <span class="tagline">Rotation Period</span>
-            <p class="selected_p">Blond</p>
+            <p class="selected_p">{{row_data[0].rotation_period}}</p>
           </div>
           <div class="details">
             <span class="tagline">Orbital Period</span>
-            <p class="selected_p">Blond</p>
+            <p class="selected_p">{{row_data[0].orbital_period}}</p>
           </div>
          </div>
           <div v-if="type === 'starships'">
-          <h1 class="selected_name">Executor</h1>
+          <h1 class="selected_name">{{row_data[0].name}}</h1>
           <div class="details">
             <span class="tagline">Model</span>
-            <p class="selected_p">Male</p>
+            <p class="selected_p">{{row_data[0].model}}</p>
           </div>
           <div class="details">
             <span class="tagline">Manufacturer</span>
-            <p class="selected_p">1BBY</p>
+            <p class="selected_p">{{row_data[0].manufacturer}}</p>
           </div>
           <div class="details">
             <span class="tagline">Cost in Credits</span>
-            <p class="selected_p">Blond</p>
+            <p class="selected_p">{{row_data[0].cost_in_credits}}</p>
           </div>
             <div class="details">
             <span class="tagline">Crew</Span>
-            <p class="selected_p">Male</p>
+            <p class="selected_p">{{row_data[0].crew}}</p>
           </div>
           <div class="details">
             <span class="tagline">Max Atmosphering Speed</span>
-            <p class="selected_p">1BBY</p>
+            <p class="selected_p">{{row_data[0].max_atmosphering_speed}}</p>
           </div>
           <div class="details">
             <span class="tagline">Passengers</span>
-            <p class="selected_p">Blond</p>
+            <p class="selected_p">{{row_data[0].passengers}}</p>
           </div>
           <div class="details">
-            <span class="tagline">Cargo_capacity</span>
-            <p class="selected_p">Blond</p>
+            <span class="tagline">Cargo Capacity</span>
+            <p class="selected_p">{{row_data[0].cargo_capacity}}</p>
           </div>
          </div>
         
@@ -155,6 +150,9 @@ export default {
       
     ])
   },
+  mounted(){
+    console.log(this.row_data[0].name)
+  }
 }
 </script>
 
