@@ -10,10 +10,8 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import  store  from './store/store'
 import { mapGetters } from 'vuex'
-
 Vue.use(Vuetify)
 
-////import App from './App'
 var axios = require('axios');
 require('../css/main.css')
 Vue.config.productionTip = false;
@@ -24,17 +22,10 @@ new Vue({
   el: '#app',store,
  components:{People, Selected, Planets, Starships, Landing},
   data () {
-    return {
-      
-
-     
-  
-    }
+    return {    }
   },
 
-
   computed: {
-
     ...mapGetters([
       'employee_data',
       'clicked_employee',
@@ -46,8 +37,5 @@ new Vue({
       'display_home'
       
     ])
-  },
-  mounted(){
-   // this.$store.commit('change_index', 'working');
-    console.log(this.show_select)}
+  }
 })

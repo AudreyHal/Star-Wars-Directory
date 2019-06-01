@@ -8,7 +8,7 @@
       </div>
       <div class="row second_row">
        <div class="col-xs-12 col-sm-6 col-lg-5">
-        <div class="back"  v-on:click="goHome"><v-icon dark left>arrow_back</v-icon> Take me home</div>
+        <div class="back" v-on:click="goHome"><v-icon dark left>arrow_back</v-icon> Take me home</div>
        </div>
        <div class="col-xs-12 col-sm-6 col-lg-7">
        <v-text-field
@@ -21,12 +21,7 @@
        ></v-text-field>
        </div>
       </div>
-      <!-- <v-select 
-        label="Gender" 
-        :items="['male', 'female', 'robot']"
-        v-model="gender"
-       ></v-select> -->
-       
+           
        <v-data-table
         :headers="headers"
         :items="planets"
@@ -36,7 +31,6 @@
         class="elevation-1"
        >
        
-
         <template v-slot:items="props">
          <tr @click="showAlert(props.item)">
           <td class="text-xs-left">{{ props.item.name }}</td>
@@ -57,18 +51,11 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'Planets',
-  // data () {
-  //   return {
-  //    info:[]
-  //   }
-  // },
-  //   
-
-data () {
+  
+ data () {
     return {
-      
       search: '',
-      pagination: { rowsPerPage: 11,},
+      pagination: { rowsPerPage: 7,},
       selected: [],
       headers: [
         {
@@ -79,26 +66,22 @@ data () {
         },
         { text: 'Rotation Period', value: 'rotation_period' },
         { text: 'Population', value: 'population' }
-       
-      
+            
       ],
         planets: [],
 
     }
   },
   methods: {   
-     showAlert(a){
-     if (event.target.classList.contains('btn__content')) return;
-     
-     var axios = require('axios');
-     var search_data;
-     axios({  method: 'get', url: 'https://swapi.co/api/planets/?search='+a.name   })
-    .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'planets'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_planets', false),console.log("change_type:" +this.change_type) ,console.log(this.search_data)))
-     var e= this.planets.indexOf(a);
-    
-    },
+    showAlert(a){
+      if (event.target.classList.contains('btn__content')) return;
+      var axios = require('axios');
+      var search_data;
+      axios({  method: 'get', url: 'https://swapi.co/api/planets/?search='+a.name   })
+      .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'planets'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_planets', false)))
+      var e= this.planets.indexOf(a);
+      },
     goHome: function(event){
-      
       this.$store.commit('change_display_people', false);
       this.$store.commit('change_display_planets', false);
       this.$store.commit('change_display_starships', false);
@@ -115,29 +98,25 @@ data () {
       
       
     ]),
-
-    
+   
     pages () {
-      // if (this.pagination.rowsPerPage == null ||
-      //   this.pagination.totalItems == null
-      // ) return 0
-
       return Math.ceil(this.pagination.totalItems / this.pagination.rowsPerPage)
     }
   },
+
   created () {
-   for (var i = 1; i < 8; i++) {
-  var swapi_url='https://swapi.co/api/planets/?page=' + i;
-  var axios = require('axios');
-  axios({  method: 'get', url: swapi_url   })
- .then(response => (this.planets= this.planets.concat( response.data.results)) )
-} 
-this.pagination.totalItems=61;
- }
-}
+    for (var i = 1; i < 8; i++) {
+    var swapi_url='https://swapi.co/api/planets/?page=' + i;
+    var axios = require('axios');
+    axios({  method: 'get', url: swapi_url   })
+    .then(response => (this.planets= this.planets.concat( response.data.results)) )
+    } 
+    this.pagination.totalItems=61;
+    }
+  }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style >
 
 </style>

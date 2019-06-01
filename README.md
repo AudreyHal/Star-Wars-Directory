@@ -1,6 +1,6 @@
-# weather_app
+# star_wars_directory
 
-> A Vue.js project
+> A Star wars directory project powered by SWAPI and built with Vue.Js
 
 ## Build Setup
 

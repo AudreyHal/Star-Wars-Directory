@@ -1,8 +1,8 @@
-body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/person.png") !important;background-size: cover; background: no-repeat #000;}
+body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/person.png") !important;background-size: cover; background: no-repeat #000; font-family: 'Merriweather', serif;}
 #body{ height:300px ;}
 table.v-table, .elevation-1{background: rgba(0, 0, 0, 0.6) !important; color: rgb(187, 187, 187) !important}
 .elevation-2{background: rgba(0, 0, 0, 0.8); color: rgb(187, 187, 187) }
-.outer-container{   background-image: linear-gradient(rgba(0,0,0,.8)); background-attachment: fixed; margin: 0;   height: 100vh;}
+.outer-container{   background-image: linear-gradient(rgba(0,0,0,.8)); background-attachment: fixed; margin: 0; height:100vh }
 .container, .container-fluid { padding-right: 15px;  padding-left: 15px;   }
 .container, .container-fluid { margin-left: auto; margin-right: auto;    }
 .row { margin-left: -15px;  margin-right: -15px;}
@@ -11,7 +11,6 @@ table.v-table, .elevation-1{background: rgba(0, 0, 0, 0.6) !important; color: rg
 .search-container { margin: 30px 0;}
 .nopadding {padding: 0;}
 button{border-bottom: 0px !important}
-/* thead th:first-child{padding-left: 0px !important ;} */
 table.v-table thead th{text-align: left !important; color: #D8C854 !important; font-weight: 700}
 button, input, select, textarea{ border-bottom: 1px solid #ffffff }
 .selected_name{color:#ffffff}
@@ -21,63 +20,36 @@ button, input, select, textarea{ border-bottom: 1px solid #ffffff }
 .data-container2{padding: 25px 0px}
 .image-container{padding-right: 0px !important}
 .option-container{margin-top:20px}
-.theme--light.v-input:not(.v-input--is-disabled) input, .theme--light.v-input:not(.v-input--is-disabled) textarea {
-    color: white; font-size: 13px
-}
+.theme--light.v-input:not(.v-input--is-disabled) input, .theme--light.v-input:not(.v-input--is-disabled) textarea {  color: white; font-size: 13px}
 .theme--light.v-pagination .v-pagination__navigation { background:  rgba(0, 0, 0, 0.6)  }
 .theme--light.v-pagination .v-pagination__navigation .v-icon {color: white; }
 .theme--light.v-pagination .v-pagination__item {color:rgb(255, 255, 255); background: rgba(0, 0, 0, 0.6) !important}
 .navbar-link{background-color: grey }
-.nav-links:hover{ }
-
-/* .selected_name{font-size: 2.5em} */
-/* @media (min-width: 1200px){.container { max-width: 1140px; }}
-@media (min-width: 992px){.container {max-width: 940px;}}*/
-@media (min-width: 768px){.logo {  margin: 0px;} ; /*.container {max-width: 720px;} */}
-@media (min-width: 544px){body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/landing3.jpg") !important;background-size: cover; background: no-repeat #000;};.logo {  margin: 0px;}; .searchbox{margin-top:50px  }; /*.container {max-width: 576px;} */} 
- /*@media (min-width: 992px){.offset-lg-1 { margin-left: 8.33333%;}}
-@media (min-width: 992px){.col-lg-10 {float: left; width: 83.33333%;}} */
-@media only screen and (min-width : 320px) and (max-width : 480px) {.nav-links{background-color:rgb(0, 0, 0, 0.5); width:100%; padding:10px 0px; margin:2px 0px }   .title_text{text-align:center} back{text-align: center} }
-@media only screen and (min-width: 480px){.nav-container{width: 400px;  padding-top:20px; margin-left:-15px; font-size:14px}; .nav-links{background-color:rgb(8, 8, 8) !important; width:100%; padding: 0px; margin: 0px }}
-@media (min-width:641px){.nav-link{background-color: rgba(22, 22, 22, 0.9); border-radius: 3px;   }  .elevation-2{width:40%; margin:0px auto; } .elevation-2-head{width:40%; margin:0px auto; margin-bottom:2px } .data-container{padding-left:50px !important} .back_container{padding-left: 0px  } }
 ::placeholder{color:rgb(126, 126, 126) !important; padding-left: 10px; font-size: 14px }
-img {
-    vertical-align: middle;
-    border-style: none;
-}
-
-.logo {
-    width: 100%;
-    max-width: 140px;
-    display: block;
-    margin: 0px auto 25px;
-}
- .sh1 {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: Lato,sans-serif;
-    font-size: 2.2em;
-}
-
-.tagline {
-    display: block;
-    padding-bottom: .25em;
-    color: rgb(223, 208, 1);
-    font-size: 1.1em;
-    text-transform: capitalize 
-}
+img {vertical-align: middle;  border-style: none;}
+.logo { width: 100%; max-width: 140px; display: block; margin: 0px auto 25px;}
+.sh1 { text-transform: uppercase; font-weight: 700; font-family: Lato,sans-serif; font-size: 2.2em;}
+.tagline { display: block; padding-bottom: .25em; color: rgb(223, 208, 1); font-size: 1.1em; text-transform: capitalize}
 .option_head{font-size:1.3em}
 .options{padding: 20px 0px 20px 15px; font-size:1.3em; color: white; text-align:center}
 .options:hover{background-color: blue}
 .landing_image{width:100%}
 .nav-container{color:	#D8C854;  text-align: center; margin-top:40px}
 .nav-links:hover{font-weight:700}
- tbody tr:hover{ background-color: aquamarine}
-
- .title_text{color: white; font-size: 2.6em}
- .tag_text{font-size:20px; color:rgb(114, 114, 114); margin-left:60px}
- .theme--light.v-datatable thead th.column.sortable.active .v-icon{color: rgb(223, 208, 1)}
- .back{color:rgb(173, 173, 173); padding-top: 5px}
- .second_row{margin-bottom: 5px }
- .v-icon--left { margin-right: 0px !important;  font-size: 16px;}
- .theme--dark.v-icon{color:rgb(173, 173, 173) !important}
+tbody tr:hover{ background-color: aquamarine}
+.title_text{color: white; font-size: 2.6em}
+.tag_text{font-size:20px; color:rgb(114, 114, 114); margin-left:60px}
+.theme--light.v-datatable thead th.column.sortable.active .v-icon{color: rgb(223, 208, 1)}
+.back{color:rgb(173, 173, 173); padding-top: 7px}
+.second_row{margin-bottom: 5px }
+.v-icon--left { margin-right: 0px !important;  font-size: 16px;}
+.theme--dark.v-icon{color:rgb(173, 173, 173) !important}
+.v-list {background: rgb(26, 25, 25) !important; color:  rgb(255, 255, 255); font-size: 12px !important}
+.v-menu__content,  .menuable__content__active{ top:0px !important; max-width: 600px !important; min-width:280px !important }
+.v-list__tile__title{color: white; font-size: 12px }
+.genderbox i{color: white !important}
+@media (min-width: 768px){ }
+@media (min-width: 544px){body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/landing3.jpg") !important;background-size: cover; background: no-repeat #000;};.logo {  margin: 0px;}; .searchbox{margin-top:50px  }; /*.container {max-width: 576px;} */} 
+@media only screen and (min-width : 320px) and (max-width : 480px) {.nav-links{background-color:rgb(0, 0, 0, 0.5); width:100%; padding:10px 0px; margin:2px 0px }   .title_text{text-align:center} back{text-align: center} }
+@media only screen and (min-width: 480px){.nav-container{width: 400px;  padding-top:20px; margin-left:-15px; font-size:14px}; .nav-links{background-color:rgb(8, 8, 8) !important; width:100%; padding: 0px; margin: 0px }}
+@media (min-width:641px){.nav-link{background-color: rgba(22, 22, 22, 0.9); border-radius: 3px;   }  .elevation-2{width:40%; margin:0px auto; } .elevation-2-head{width:40%; margin:0px auto; margin-bottom:2px } .data-container{padding-left:50px !important} .back_container{padding-left: 0px  } .back{padding-top:20px}}

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!--Import Bootstrap.css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">       
     <link rel="stylesheet" href="/main.css">
-    <title>weather_app</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <title>Star Wars Directory</title>
   </head>
   <body>
     <div class="outer-container">
@@ -15,18 +15,14 @@
       <div class="row">
         <div class="col-xs-12 col-lg-10 offset-lg-1">
          <div id="app" class=" center-block">
-
           <People v-if="display_people" ></People>
           <Landing v-if="display_home" ></Landing>
-           
-           <Selected v-if="show_select"></Selected>
-           
-           <Planets v-if="display_planets"></Planets>
-           <Starships v-if="display_starships"></Starships>
+          <Selected v-if="show_select"></Selected>
+          <Planets v-if="display_planets"></Planets>
+          <Starships v-if="display_starships"></Starships>
          </div> 
         </div>
        </div>
-      <!-- -->  
      </div>
     </div>
     
