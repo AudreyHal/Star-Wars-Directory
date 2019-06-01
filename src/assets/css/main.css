@@ -1,8 +1,8 @@
-body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/person.png") !important;background-size: cover; background: no-repeat #000; font-family: 'Merriweather', serif;}
+body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/person.png")!important ;background-size: cover; background: no-repeat #000; font-family: 'Merriweather', serif;}
 #body{ height:300px ;}
 table.v-table, .elevation-1{background: rgba(0, 0, 0, 0.6) !important; color: rgb(187, 187, 187) !important}
 .elevation-2{background: rgba(0, 0, 0, 0.8); color: rgb(187, 187, 187) }
-.outer-container{   background-image: linear-gradient(rgba(0,0,0,.8)); background-attachment: fixed; margin: 0; height:100vh; overflow:auto }
+.outer-container{ background-color: rgba(0,0,0,.8) !important; background-attachment: fixed; margin: 0; height:100vh; overflow:auto }
 .container, .container-fluid { padding-right: 15px;  padding-left: 15px;   }
 .container, .container-fluid { margin-left: auto; margin-right: auto;    }
 .row { margin-left: -15px;  margin-right: -15px;}
