@@ -4,8 +4,13 @@
        <div class="col-xs-12 col-sm-12 col-lg-12">
          <img src="../images/logo.png" class="logo" alt="star-wars-logo" width="130" height="100">
        </div>
-        
-    </div>
+      </div>
+      <div class="row elevation-2-head">
+       <div class="col-xs-12 col-sm-12 col-lg-12 back_container">
+        <div class="back" v-on:click="goBack"><v-icon dark left>arrow_back</v-icon> Take me back</div>
+       </div>
+      </div>
+
     <div class="elevation-2">
      <div class="row">
        <div class="col-xs-12 col-sm-12 col-lg-12 data-container">
@@ -135,9 +140,18 @@ export default {
   name: 'Selected',
   data () {
     return {
-      msg: ''
+     
     }
   },
+  methods: {   
+    
+    goBack: function(event){
+      if(this.type == 'people'){this.$store.commit('change_display_people', true); this.$store.commit('change_show_select', false); }
+      if(this.type == 'planets'){this.$store.commit('change_display_planets', true); this.$store.commit('change_show_select', false); }
+      if(this.type == 'starships'){this.$store.commit('change_display_starships', true); this.$store.commit('change_show_select', false); }
+      
+    }
+    },
    computed: {
 
     ...mapGetters([

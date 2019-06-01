@@ -27,6 +27,9 @@ export default new Vuex.Store({
         change_type(state, type) {
           state.type = type
         },
+        change_display_home(state, display_home) {
+          state.display_home = display_home
+        },
         change_display_planets(state, display_planets) {
           state.display_planets = display_planets,
           state.display_home = false

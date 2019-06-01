@@ -8,7 +8,7 @@
       </div>
       <div class="row second_row">
        <div class="col-xs-12 col-sm-6 col-lg-5">
-       <div class="back"><i aria-hidden="true" class="v-icon material-icons theme--light" style="font-size: 16px; color:white ">arrow_left</i> Take me home</div>
+        <div class="back"  v-on:click="goHome"><v-icon dark left>arrow_back</v-icon> Take me home</div>
        </div>
        <div class="col-xs-12 col-sm-6 col-lg-7">
        <v-text-field
@@ -96,6 +96,13 @@ data () {
     .then(response => (this.search_data=response.data.results,   this.$store.commit('change_row_data', response.data.results), this.$store.commit('change_type', 'planets'), this.$store.commit('change_show_select', true), this.$store.commit('change_display_planets', false),console.log("change_type:" +this.change_type) ,console.log(this.search_data)))
      var e= this.planets.indexOf(a);
     
+    },
+    goHome: function(event){
+      
+      this.$store.commit('change_display_people', false);
+      this.$store.commit('change_display_planets', false);
+      this.$store.commit('change_display_starships', false);
+      this.$store.commit('change_display_home', true);
     }
     },
   computed: {
