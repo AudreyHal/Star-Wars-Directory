@@ -55,7 +55,7 @@ export default {
  data () {
     return {
       search: '',
-      pagination: { rowsPerPage: 7,},
+      pagination: { rowsPerPage: 10,},
       selected: [],
       headers: [
         {
