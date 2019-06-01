@@ -6,9 +6,9 @@
        </div>
        <div class="col-xs-12 col-sm-6 col-lg-7">
         <div class="row nav-container">
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><span class="nav-links" v-on:click="showPeople">People</span></div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><span class="nav-links" v-on:click="showPlanets">Planets</span></div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><span class="nav-links" v-on:click="showStarships">Starships</span></div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 nav-links"><span class="nav-link" v-on:click="showPeople">People</span></div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 nav-links"><span class="nav-link" v-on:click="showPlanets">Planets</span></div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 nav-links"><span class="nav-link" v-on:click="showStarships">Starships</span></div>
         </div>
       </div>   
     </div>
