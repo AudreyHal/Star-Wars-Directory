@@ -1,4 +1,4 @@
-body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/person.png")!important ;background-size: cover; background: no-repeat #000; font-family: 'Merriweather', serif;}
+body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/person2.png")!important ;background-size: cover; background: no-repeat #000; font-family: 'Merriweather', serif;}
 #body{ height:300px ;}
 table.v-table, .elevation-1{background: rgba(0, 0, 0, 0.6) !important; color: rgb(187, 187, 187) !important}
 .elevation-2{background: rgba(0, 0, 0, 0.8); color: rgb(187, 187, 187) }
@@ -11,7 +11,7 @@ table.v-table, .elevation-1{background: rgba(0, 0, 0, 0.6) !important; color: rg
 .search-container { margin: 30px 0;}
 .nopadding {padding: 0;}
 button{border-bottom: 0px !important}
-table.v-table thead th{text-align: left !important; color: #D8C854 !important; font-weight: 700}
+table.v-table thead th{text-align: left !important; color: rgb(223, 208, 1)!important; font-weight: 500}
 button, input, select, textarea{ border-bottom: 1px solid #ffffff }
 .selected_name{color:#ffffff}
 .selected_p{margin-top: 0px; text-transform: capitalize }
@@ -34,7 +34,7 @@ img {vertical-align: middle;  border-style: none;}
 .options{padding: 20px 0px 20px 15px; font-size:1.3em; color: white; text-align:center}
 .options:hover{background-color: blue}
 .landing_image{width:100%}
-.nav-container{color:	#D8C854;  text-align: center; margin-top:40px}
+.nav-container{color:rgb(223, 208, 1);  text-align: center; margin-top:40px}
 .nav-links:hover{font-weight:700}
 tbody tr:hover{ background-color: aquamarine}
 .title_text{color: white; font-size: 2.6em}
@@ -48,6 +48,8 @@ tbody tr:hover{ background-color: aquamarine}
 .v-menu__content,  .menuable__content__active{ top:0px !important; max-width: 600px !important; min-width:280px !important }
 .v-list__tile__title{color: white; font-size: 12px }
 .genderbox i{color: white !important}
+table.v-table tbody tr:hover td{background-color: rgb(14, 14, 14); color:rgb(119, 119, 119)}
+table.v-table tbody tr{transition: none; }
 @media (min-width: 768px){ }
 @media (min-width: 544px){body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/landing3.jpg") !important;background-size: cover; background: no-repeat #000;};.logo {  margin: 0px;}; .searchbox{margin-top:50px  }; /*.container {max-width: 576px;} */} 
 @media only screen and (min-width : 320px) and (max-width : 480px) {.nav-links{background-color:rgb(0, 0, 0, 0.5); width:100%; padding:10px 0px; margin:2px 0px }   .title_text{text-align:center} back{text-align: center} }
