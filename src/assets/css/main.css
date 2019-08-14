@@ -50,6 +50,7 @@ tbody tr:hover{ background-color: aquamarine}
 .genderbox i{color: white !important}
 table.v-table tbody tr:hover td{background-color: rgb(14, 14, 14); color:rgb(119, 119, 119)}
 table.v-table tbody tr{transition: none; }
+.nav-link{cursor: pointer}
 @media (min-width: 768px){ }
 @media (min-width: 544px){body{animation:change_bg 5s infinite; height:100%; background-image: url("../images/landing3.jpg") !important;background-size: cover; background: no-repeat #000;};.logo {  margin: 0px;}; .searchbox{margin-top:50px  }; /*.container {max-width: 576px;} */} 
 @media only screen and (min-width : 320px) and (max-width : 480px) {.nav-links{background-color:rgb(0, 0, 0, 0.5); width:100%; padding:10px 0px; margin:2px 0px }   .title_text{text-align:center} back{text-align: center} }
