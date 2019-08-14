@@ -40,7 +40,7 @@ tbody tr:hover{ background-color: aquamarine}
 .title_text{color: white; font-size: 2.6em}
 .tag_text{font-size:20px; color:rgb(114, 114, 114); margin-left:60px}
 .theme--light.v-datatable thead th.column.sortable.active .v-icon{color: rgb(223, 208, 1)}
-.back{color:rgb(173, 173, 173); padding-top: 7px}
+.back{color:rgb(173, 173, 173); padding-top: 7px; cursor: pointer}
 .second_row{margin-bottom: 5px }
 .v-icon--left { margin-right: 0px !important;  font-size: 16px;}
 .theme--dark.v-icon{color:rgb(173, 173, 173) !important}
